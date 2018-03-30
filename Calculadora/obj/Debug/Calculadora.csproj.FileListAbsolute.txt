@@ -1,0 +1,9 @@
+C:\Users\BrOtHer\source\repos\Calculadora\Calculadora\bin\Debug\Calculadora.exe
+C:\Users\BrOtHer\source\repos\Calculadora\Calculadora\bin\Debug\Calculadora.pdb
+C:\Users\BrOtHer\source\repos\Calculadora\Calculadora\obj\Debug\Calculadora.csprojResolveAssemblyReference.cache
+C:\Users\BrOtHer\source\repos\Calculadora\Calculadora\obj\Debug\Calculadora.frmCalculadora.resources
+C:\Users\BrOtHer\source\repos\Calculadora\Calculadora\obj\Debug\Calculadora.Properties.Resources.resources
+C:\Users\BrOtHer\source\repos\Calculadora\Calculadora\obj\Debug\Calculadora.csproj.GenerateResource.Cache
+C:\Users\BrOtHer\source\repos\Calculadora\Calculadora\obj\Debug\Calculadora.csproj.CoreCompileInputs.cache
+C:\Users\BrOtHer\source\repos\Calculadora\Calculadora\obj\Debug\Calculadora.exe
+C:\Users\BrOtHer\source\repos\Calculadora\Calculadora\obj\Debug\Calculadora.pdb
