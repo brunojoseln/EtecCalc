@@ -27,6 +27,8 @@ namespace Calculadora
 
         }
 
+
+        //Números
         private void btn1_Click(object sender, EventArgs e)
         {
             if (countVisor !=9)
@@ -108,6 +110,17 @@ namespace Calculadora
             }
         }
 
+        private void btn0_Click(object sender, EventArgs e)
+        {
+            if (countVisor != 9)
+            {
+                txtVisor.Text += '0';
+                countVisor++;
+            }
+        }
+
+
+        //4 operações
         private void btnSomar_Click(object sender, EventArgs e)
         {
             if (txtVisor.Text != "")
@@ -174,7 +187,48 @@ namespace Calculadora
 
         private void btnIgual_Click(object sender, EventArgs e)
         {
+            if (txtVisor.Text != "" )
+            {
+                memAux =Convert.ToDouble(txtVisor.Text);
+                switch (operador)
+                {
+                    case "+":
+                        valor1 += memAux;
+                        txtVisor.Text =Convert.ToString(valor1);
+                        valor1 = 0;
+                        break;
 
+                    case "-":
+                        valor1 -= memAux;
+                        txtVisor.Text = Convert.ToString(valor1);
+                        valor1 = 0;
+                        break;
+                    case "*":
+                        valor1 *= memAux;
+                        txtVisor.Text = Convert.ToString(valor1);
+                        valor1 = 0;
+                        break;
+                    case "/":
+                        if (valor1 != 0 && memAux !=0)
+                        {
+                            valor1 = valor1 / memAux;
+                            txtVisor.Text = Convert.ToString(valor1);
+                            valor1 = 0;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Impossivel realizar divisão por 0!","Erro");
+                        }
+                        break;
+                }
+
+                countVisor = 0;
+
+                btnSomar.Enabled = true;
+                btnSub.Enabled = true;
+                btnMult.Enabled = true;
+                btnDiv.Enabled = true;
+            }
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
@@ -189,13 +243,97 @@ namespace Calculadora
 
         }
 
-        private void btn0_Click(object sender, EventArgs e)
+        //Pergunta ao usuário se ele realmente quer sair
+        private void frmCalculadora_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (countVisor != 9)
+            if (MessageBox.Show("Deseja fechar ?","Sair",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.No)
             {
-                txtVisor.Text += '0';
-                countVisor++;
+                e.Cancel = true;
             }
         }
+
+        /* Quis incrementar o algoritmo e pesquisando encontrei o evento KeyDown,
+         * toda vez que o usuário aperta um numero esse evento faz com que o numero
+         * receba um clique assim adicionando ele no visor da calculadora */
+
+        private void txtVisor_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.NumPad1)
+            {
+                btn1.PerformClick();
+            }
+
+            if (e.KeyCode == Keys.NumPad2)
+            {
+                btn2.PerformClick();
+            }
+
+            if (e.KeyCode == Keys.NumPad3)
+            {
+                btn3.PerformClick();
+            }
+
+            if (e.KeyCode == Keys.NumPad4)
+            {
+                btn4.PerformClick();
+            }
+
+            if (e.KeyCode == Keys.NumPad5)
+            {
+                btn5.PerformClick();
+            }
+
+            if (e.KeyCode == Keys.NumPad6)
+            {
+                btn6.PerformClick();
+            }
+
+            if (e.KeyCode == Keys.NumPad7)
+            {
+                btn7.PerformClick();
+            }
+
+            if (e.KeyCode == Keys.NumPad8)
+            {
+                btn8.PerformClick();
+            }
+
+            if (e.KeyCode == Keys.NumPad9)
+            {
+                btn9.PerformClick();
+            }
+
+            if (e.KeyCode == Keys.NumPad0)
+            {
+                btn0.PerformClick();
+            }
+
+            if (e.KeyCode == Keys.Add)
+            {
+                btnSomar.PerformClick();
+            }
+
+            if (e.KeyCode == Keys.Subtract)
+            {
+                btnSub.PerformClick();
+            }
+
+            if (e.KeyCode == Keys.Multiply)
+            {
+                btnMult.PerformClick();
+            }
+
+            if (e.KeyCode == Keys.Divide)
+            {
+                btnDiv.PerformClick();
+            }
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnIgual.PerformClick();
+            }
+        }
+
+
     }
 }

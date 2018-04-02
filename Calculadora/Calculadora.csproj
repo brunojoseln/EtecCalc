@@ -56,18 +56,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -76,36 +76,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\opdivi.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\0.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\7.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\8.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\9.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\opigual.jpg" />
@@ -121,6 +91,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\opx.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num9.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
