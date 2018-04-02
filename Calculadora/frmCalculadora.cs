@@ -252,9 +252,19 @@ namespace Calculadora
             }
         }
 
+        /*Criei esse evento para o foco não sair do visor, pois quando o usuário clica em um número
+         o foco vai para o número e caso o usuário digite no teclado o número não vai aparecer
+         pois o KeyDown está está programado no visor */
+        private void txtVisor_Leave(object sender, EventArgs e)
+        {
+            txtVisor.Focus();
+        }
+
         /* Quis incrementar o algoritmo e pesquisando encontrei o evento KeyDown,
          * toda vez que o usuário aperta um numero esse evento faz com que o numero
-         * receba um clique assim adicionando ele no visor da calculadora */
+         * receba um clique assim adicionando ele no visor da calculadora.
+         * 
+         * Consultei essa página para me auxiliar no código: https://social.msdn.microsoft.com/Forums/pt-BR/6aaef556-ef9b-44d3-ae0b-50ff4d6629ad/calculadora-pelo-teclado?forum=vscsharppt */
 
         private void txtVisor_KeyDown(object sender, KeyEventArgs e)
         {
@@ -331,6 +341,11 @@ namespace Calculadora
             if (e.KeyCode == Keys.Enter)
             {
                 btnIgual.PerformClick();
+            }
+
+            if (e.KeyCode == Keys.Escape)
+            {
+                Close();
             }
         }
 

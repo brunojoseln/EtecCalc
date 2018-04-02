@@ -58,6 +58,7 @@
             this.txtVisor.Size = new System.Drawing.Size(301, 56);
             this.txtVisor.TabIndex = 0;
             this.txtVisor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtVisor_KeyDown);
+            this.txtVisor.Leave += new System.EventHandler(this.txtVisor_Leave);
             // 
             // btnLimpar
             // 
