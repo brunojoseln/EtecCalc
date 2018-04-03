@@ -7,3 +7,12 @@ C:\Users\BrOtHer\source\repos\Calculadora\Calculadora\obj\Debug\Calculadora.cspr
 C:\Users\BrOtHer\source\repos\Calculadora\Calculadora\obj\Debug\Calculadora.csproj.CoreCompileInputs.cache
 C:\Users\BrOtHer\source\repos\Calculadora\Calculadora\obj\Debug\Calculadora.exe
 C:\Users\BrOtHer\source\repos\Calculadora\Calculadora\obj\Debug\Calculadora.pdb
+J:\1NF0RM4T1C4\Calculadora\Calculadora\obj\Debug\Calculadora.exe
+J:\1NF0RM4T1C4\Calculadora\Calculadora\obj\Debug\Calculadora.pdb
+J:\1NF0RM4T1C4\Calculadora\Calculadora\bin\Debug\Calculadora.exe
+J:\1NF0RM4T1C4\Calculadora\Calculadora\bin\Debug\Calculadora.pdb
+J:\1NF0RM4T1C4\Calculadora\Calculadora\obj\Debug\ResolveAssemblyReference.cache
+J:\1NF0RM4T1C4\Calculadora\Calculadora\obj\Debug\Calculadora.frmCalculadora.resources
+J:\1NF0RM4T1C4\Calculadora\Calculadora\obj\Debug\Calculadora.Properties.Resources.resources
+J:\1NF0RM4T1C4\Calculadora\Calculadora\obj\Debug\GenerateResource.read.1.tlog
+J:\1NF0RM4T1C4\Calculadora\Calculadora\obj\Debug\GenerateResource.write.1.tlog

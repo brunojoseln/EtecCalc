@@ -75,52 +75,61 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\opdivi.jpg" />
+    <None Include="Resources\divisao.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\opigual.jpg" />
+    <None Include="Resources\igual1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\oplimpar.jpg" />
+    <None Include="Resources\igual2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\opsoma.jpg" />
+    <None Include="Resources\limpar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\opsub.jpg" />
+    <None Include="Resources\mais.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\opx.jpg" />
+    <None Include="Resources\menos.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\num0.jpg" />
+    <None Include="Resources\multiplicacao.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\num1.jpg" />
+    <None Include="Resources\porcentagem.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\num2.jpg" />
+    <None Include="Resources\raiz.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\num3.jpg" />
+    <None Include="Resources\num0.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\num4.jpg" />
+    <None Include="Resources\num1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\num5.jpg" />
+    <None Include="Resources\num2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\num6.jpg" />
+    <None Include="Resources\num3.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\num7.jpg" />
+    <None Include="Resources\num4.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\num8.jpg" />
+    <None Include="Resources\num5.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\num9.jpg" />
+    <None Include="Resources\num6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num9.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

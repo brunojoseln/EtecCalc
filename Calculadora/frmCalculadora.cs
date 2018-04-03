@@ -134,6 +134,8 @@ namespace Calculadora
                 btnSub.Enabled =false;
                 btnMult.Enabled =false;
                 btnDiv.Enabled =false;
+                btnRaiz.Enabled = false;
+                btnPorcen.Enabled = false;
             }
         }
 
@@ -150,6 +152,8 @@ namespace Calculadora
                 btnSub.Enabled = false;
                 btnMult.Enabled = false;
                 btnDiv.Enabled = false;
+                btnRaiz.Enabled = false;
+                btnPorcen.Enabled = false;
             }
         }
 
@@ -166,6 +170,8 @@ namespace Calculadora
                 btnSub.Enabled = false;
                 btnMult.Enabled = false;
                 btnDiv.Enabled = false;
+                btnRaiz.Enabled = false;
+                btnPorcen.Enabled = false;
             }
         }
 
@@ -182,6 +188,8 @@ namespace Calculadora
                 btnSub.Enabled = false;
                 btnMult.Enabled = false;
                 btnDiv.Enabled = false;
+                btnRaiz.Enabled = false;
+                btnPorcen.Enabled = false;
             }
         }
 
@@ -228,8 +236,13 @@ namespace Calculadora
                 btnSub.Enabled = true;
                 btnMult.Enabled = true;
                 btnDiv.Enabled = true;
+                btnRaiz.Enabled = true;
+                btnPorcen.Enabled = true;
+
+              
             }
         }
+
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
@@ -240,6 +253,8 @@ namespace Calculadora
             btnSub.Enabled =true;
             btnMult.Enabled =true;
             btnDiv.Enabled =true;
+            btnRaiz.Enabled = true;
+            btnPorcen.Enabled = true;
 
         }
 
@@ -268,52 +283,52 @@ namespace Calculadora
 
         private void txtVisor_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.NumPad1)
+            if (e.KeyCode == Keys.NumPad1 || e.KeyCode == Keys.D1)
             {
                 btn1.PerformClick();
             }
 
-            if (e.KeyCode == Keys.NumPad2)
+            if (e.KeyCode == Keys.NumPad2 || e.KeyCode == Keys.D2)
             {
                 btn2.PerformClick();
             }
 
-            if (e.KeyCode == Keys.NumPad3)
+            if (e.KeyCode == Keys.NumPad3 || e.KeyCode == Keys.D3)
             {
                 btn3.PerformClick();
             }
 
-            if (e.KeyCode == Keys.NumPad4)
+            if (e.KeyCode == Keys.NumPad4 || e.KeyCode == Keys.D4)
             {
                 btn4.PerformClick();
             }
 
-            if (e.KeyCode == Keys.NumPad5)
+            if (e.KeyCode == Keys.NumPad5 || e.KeyCode == Keys.D5)
             {
                 btn5.PerformClick();
             }
 
-            if (e.KeyCode == Keys.NumPad6)
+            if (e.KeyCode == Keys.NumPad6 || e.KeyCode == Keys.D6)
             {
                 btn6.PerformClick();
             }
 
-            if (e.KeyCode == Keys.NumPad7)
+            if (e.KeyCode == Keys.NumPad7 || e.KeyCode == Keys.D7)
             {
                 btn7.PerformClick();
             }
 
-            if (e.KeyCode == Keys.NumPad8)
+            if (e.KeyCode == Keys.NumPad8 || e.KeyCode == Keys.D8) 
             {
                 btn8.PerformClick();
             }
 
-            if (e.KeyCode == Keys.NumPad9)
+            if (e.KeyCode == Keys.NumPad9 || e.KeyCode == Keys.D9)
             {
                 btn9.PerformClick();
             }
 
-            if (e.KeyCode == Keys.NumPad0)
+            if (e.KeyCode == Keys.NumPad0 || e.KeyCode == Keys.D0)
             {
                 btn0.PerformClick();
             }
@@ -347,6 +362,23 @@ namespace Calculadora
             {
                 Close();
             }
+        }
+
+        private void btnRaiz_Click(object sender, EventArgs e)
+        {
+            if (txtVisor.Text != "")
+            {
+                valor1 = Convert.ToDouble(txtVisor.Text);
+                txtVisor.Text = Math.Sqrt(valor1).ToString();
+            }
+ 
+        }
+
+        private void btnPorcen_Click(object sender, EventArgs e)
+        {
+            valor1 = Convert.ToDouble(txtVisor.Text);
+            //Fazer a porcentagem
+
         }
 
 
