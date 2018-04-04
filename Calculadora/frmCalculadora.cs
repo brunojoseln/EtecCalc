@@ -14,7 +14,7 @@ namespace Calculadora
         //Variaveis globais
         //Declarei e já atribui valor 0 pra váriavel valor1
         int countVisor;
-        double valor1 = 0, memAux,porc;
+        double valor1 = 0, memAux,porc,memoria = 0;
         String operador;
 
         public frmCalculadora()
@@ -205,7 +205,7 @@ namespace Calculadora
                 switch (operador)
                 {
                     case "+":
-                        valor1 += memAux;
+                        valor1 += memAux;                        
                         txtVisor.Text =Convert.ToString(valor1);
                         valor1 = 0;
                         break;
@@ -289,6 +289,81 @@ namespace Calculadora
             }
         }
 
+        //Soma valor a memoria
+        private void btnSomaMemoria_Click(object sender, EventArgs e)
+        {
+            lblmemoria.Visible = true;
+            if (memoria != 0)
+            {
+                memoria = memoria + Convert.ToDouble(txtVisor.Text);
+            }
+            else
+            {
+                memoria = Convert.ToDouble(txtVisor.Text);
+            }
+            
+
+        }
+
+        /*Subtrai o valor na memoria
+         * 
+         * Fiz a memsma coisa que o primeiro a diferença é que depois de realizada a soma o valor da
+         * memoria é multiplicado por -1
+         * */
+        private void btnSubMemoria_Click(object sender, EventArgs e)
+        {
+            lblmemoria.Visible = true;
+            if (memoria != 0)
+            {
+                memoria = memoria + Convert.ToDouble(txtVisor.Text);
+                if (memoria > 0)
+                {
+                    memoria = memoria * (-1);
+                }
+                
+            }
+            else
+            {
+                memoria = Convert.ToDouble(txtVisor.Text);
+                memoria = memoria * (-1);
+            }
+
+        }
+
+        //limpa a memoria
+        private void btrnLimpaMemoria_Click(object sender, EventArgs e)
+        {
+            memoria = 0;
+            lblmemoria.Visible = false;
+;        }
+
+        //Exibe o valor da memoria
+        private void btnMostrarmemoria_Click(object sender, EventArgs e)
+        {
+            txtVisor.Text = Convert.ToString(memoria);
+            Convert.ToDouble(memoria);
+        }
+
+
+
+        private void btnSub_Click_1(object sender, EventArgs e)
+        {
+            if (txtVisor.Text != "")
+            {
+                valor1 = Convert.ToDouble(txtVisor.Text);
+                operador = "-";
+                txtVisor.Clear();
+                countVisor = 0;
+
+                btnSomar.Enabled = false;
+                btnSub.Enabled = false;
+                btnMult.Enabled = false;
+                btnDiv.Enabled = false;
+                btnRaiz.Enabled = false;
+            }
+        }
+
+
         /*Criei esse evento para o foco não sair do visor, pois quando o usuário clica em um número
          o foco vai para o número e caso o usuário digite no teclado o número não vai aparecer
          pois o KeyDown está está programado no visor */
@@ -296,6 +371,7 @@ namespace Calculadora
         {
             txtVisor.Focus();
         }
+
 
         /* Quis incrementar o algoritmo e pesquisando encontrei o evento KeyDown,
          * toda vez que o usuário aperta um numero esse evento faz com que o numero

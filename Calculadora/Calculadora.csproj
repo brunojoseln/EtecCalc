@@ -131,5 +131,17 @@
   <ItemGroup>
     <None Include="Resources\num9.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mmais.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mmenos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\memoryshow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\memoryclear.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
