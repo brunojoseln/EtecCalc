@@ -204,6 +204,7 @@
             // 
             this.btnPorcen.AutoSize = true;
             this.btnPorcen.BackColor = System.Drawing.Color.Transparent;
+            this.btnPorcen.Enabled = false;
             this.btnPorcen.FlatAppearance.BorderSize = 0;
             this.btnPorcen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPorcen.Font = new System.Drawing.Font("Microsoft Sans Serif", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

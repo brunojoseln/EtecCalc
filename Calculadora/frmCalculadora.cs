@@ -14,7 +14,7 @@ namespace Calculadora
         //Variaveis globais
         //Declarei e já atribui valor 0 pra váriavel valor1
         int countVisor;
-        double valor1 = 0, memAux;
+        double valor1 = 0, memAux,porc;
         String operador;
 
         public frmCalculadora()
@@ -121,6 +121,8 @@ namespace Calculadora
 
 
         //4 operações
+
+
         private void btnSomar_Click(object sender, EventArgs e)
         {
             if (txtVisor.Text != "")
@@ -135,7 +137,6 @@ namespace Calculadora
                 btnMult.Enabled =false;
                 btnDiv.Enabled =false;
                 btnRaiz.Enabled = false;
-                btnPorcen.Enabled = false;
             }
         }
 
@@ -153,7 +154,6 @@ namespace Calculadora
                 btnMult.Enabled = false;
                 btnDiv.Enabled = false;
                 btnRaiz.Enabled = false;
-                btnPorcen.Enabled = false;
             }
         }
 
@@ -165,13 +165,16 @@ namespace Calculadora
                 operador = "*";
                 txtVisor.Clear();
                 countVisor = 0;
+                porc = valor1;
+                //a variavel porc recebe o valor1 para o usuario poder calcular a porcentagem
 
                 btnSomar.Enabled = false;
                 btnSub.Enabled = false;
                 btnMult.Enabled = false;
                 btnDiv.Enabled = false;
                 btnRaiz.Enabled = false;
-                btnPorcen.Enabled = false;
+                btnPorcen.Enabled = true;
+                //o btnPorc  foi habilitado para permitir que o usuário calcule a porcentagem
             }
         }
 
@@ -189,9 +192,10 @@ namespace Calculadora
                 btnMult.Enabled = false;
                 btnDiv.Enabled = false;
                 btnRaiz.Enabled = false;
-                btnPorcen.Enabled = false;
+
             }
         }
+
 
         private void btnIgual_Click(object sender, EventArgs e)
         {
@@ -228,6 +232,7 @@ namespace Calculadora
                             MessageBox.Show("Impossivel realizar divisão por 0!","Erro");
                         }
                         break;
+
                 }
 
                 countVisor = 0;
@@ -237,10 +242,27 @@ namespace Calculadora
                 btnMult.Enabled = true;
                 btnDiv.Enabled = true;
                 btnRaiz.Enabled = true;
-                btnPorcen.Enabled = true;
-
-              
             }
+        }
+
+        private void btnPorcen_Click(object sender, EventArgs e)
+        {
+            if (txtVisor.Text != "")
+            {
+                memAux = Convert.ToDouble(txtVisor.Text);
+                txtVisor.Clear();
+                countVisor = 0;
+                valor1 = (porc * memAux)/100 ;
+                txtVisor.Text = Convert.ToString(valor1);
+
+                valor1 = memAux = countVisor = 0;
+                btnSomar.Enabled = true;
+                btnSub.Enabled = true;
+                btnMult.Enabled = true;
+                btnDiv.Enabled = true;
+                btnRaiz.Enabled = true;
+            }
+
         }
 
 
@@ -254,7 +276,7 @@ namespace Calculadora
             btnMult.Enabled =true;
             btnDiv.Enabled =true;
             btnRaiz.Enabled = true;
-            btnPorcen.Enabled = true;
+            btnPorcen.Enabled = false;
 
         }
 
@@ -373,14 +395,6 @@ namespace Calculadora
             }
  
         }
-
-        private void btnPorcen_Click(object sender, EventArgs e)
-        {
-            valor1 = Convert.ToDouble(txtVisor.Text);
-            //Fazer a porcentagem
-
-        }
-
 
     }
 }
