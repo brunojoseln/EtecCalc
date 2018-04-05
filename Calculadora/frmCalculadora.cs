@@ -199,6 +199,7 @@ namespace Calculadora
 
         private void btnIgual_Click(object sender, EventArgs e)
         {
+            btnPorcen.Enabled = false;
             if (txtVisor.Text != "" )
             {
                 memAux =Convert.ToDouble(txtVisor.Text);
@@ -234,6 +235,7 @@ namespace Calculadora
                         break;
 
                 }
+
 
                 countVisor = 0;
 
@@ -299,7 +301,17 @@ namespace Calculadora
             }
             else
             {
-                memoria = Convert.ToDouble(txtVisor.Text);
+                //tratatemnto de erro caso o usuário não insira nenhum valor p/ ser adicionado na memória
+                try
+                {
+                    memoria = Convert.ToDouble(txtVisor.Text);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Insira um valor para ser armazenado na memória","Erro");
+                    lblmemoria.Visible = false;
+                }
+               
             }
             
 
@@ -324,8 +336,17 @@ namespace Calculadora
             }
             else
             {
-                memoria = Convert.ToDouble(txtVisor.Text);
-                memoria = memoria * (-1);
+                try
+                {
+                    memoria = Convert.ToDouble(txtVisor.Text);
+                    memoria = memoria * (-1);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Insira um valor para ser armazenado na mamória","Erro");
+                    lblmemoria.Visible = false;
+                }
+               
             }
 
         }
